@@ -44,6 +44,8 @@
 			<div class="name-on-top">
 				{#if $activeScene?.name}
 					{$activeScene.name}
+				{:else}
+					-
 				{/if}
 			</div>
 		{/if}

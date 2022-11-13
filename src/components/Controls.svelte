@@ -161,7 +161,7 @@
 	/>
 	<code class="history">
 		{#each reverse($commandHistory) as h}
-			<p>> {@html h}</p>
+			<p>> {h}</p>
 		{/each}
 	</code>
 </div>

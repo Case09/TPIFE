@@ -1,7 +1,7 @@
 import {alreadyPerformed, changeItemState, changeScene, hasItem, hasItemState, recordAction, setText, takeItem} from '../../src/stores/helpers';
 import lexicon from '../../disk-drive/lexicon';
 import config from '../../disk-drive/config';
-import type { IGame, IScene } from '../../src/types';
+import type { IAction, IGame, IScene } from '../../src/types';
 
 const rainyDay = <IGame>{
   scenes:<IScene[]>[
@@ -61,13 +61,13 @@ const rainyDay = <IGame>{
       onEnter: () => {
         setText(`You're in the kitchen.
 
-You see a lantern on the floor.
+You see a <u>lantern</u> on the floor.
 `
         );
       },
       onLook: () => {
         recordAction('kitchen-look');
-        setText('It\'s hella dirty. Lantern lies on the floor');
+        setText('It\'s hella dirty. <u>Lantern</u> lies on the floor');
       },
       actions: [
         {
@@ -101,6 +101,7 @@ You see a lantern on the floor.
     },
     {
       id: 'hallway',
+      name: 'Hallway',
       onEnter: () => {
         setText('Hallway is long and dark.');
       },
@@ -116,7 +117,7 @@ You see a lantern on the floor.
       ]
     }
   ],
-  inventoryActions: [
+  inventoryActions: <IAction[]>[
     {
       id: 'turn-on-lantern',
       keys: [
