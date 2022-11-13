@@ -27,8 +27,7 @@ export function showInventoryText() {
       return `${item.id} (${item.states.join(', ')})`;
     });
   });
-  const text = itemDescriptions.length > 0 ? `
-Your inventory:
+  const text = itemDescriptions.length > 0 ? `Your inventory:
 
 ${itemDescriptions.join('\n')}
 ` 

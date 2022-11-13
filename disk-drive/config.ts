@@ -23,10 +23,10 @@ const defaultConfig: IConfig = {
   theme: 'high-contrast',
   inputPlaceholder: 'Enter your action',
   gap: 16,
-  actionTimeout: 2000,
   unknownActionText: 'Unknown action.',
   emptyInventoryText: 'Currently, you have nothing in your inventory.',
-  loopSceneSoundtrack: true
+  loopSceneSoundtrack: true,
+  showSceneNameAtTheTop: true
 }
 
 import ExampleGameConfig from '../games/rainy-day/config';

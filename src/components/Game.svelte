@@ -40,6 +40,13 @@
 
 <div class="wrapper">
 	<div class="game" style={styles}>
+		{#if config.showSceneNameAtTheTop}
+			<div class="name-on-top">
+				{#if $activeScene?.name}
+					{$activeScene.name}
+				{/if}
+			</div>
+		{/if}
 		<section class="scene-container">
 			<Scene />
 		</section>
@@ -67,6 +74,12 @@
 		margin: 1rem;
 		gap: var(--gap);
 		overflow: auto;
+	}
+
+	.name-on-top {
+		height: 15px;
+		color: white;
+		font-family: monospace;
 	}
 
 	.scene-container {

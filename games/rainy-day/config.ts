@@ -5,20 +5,19 @@ const config: IConfig = {
   startingSceneId: 'living-room',
   width: 700,
   height: 500,
-  typewriterSpeed: 5,
+  typewriterSpeed: 2,
   theme: 'halloween',
-  gap: 20,
+  gap: 15,
   unknownActionText: 'Try something else.',
   helpText: 
-`
-Directions:
+`Directions:
 
 sw n nw
 w  +  e
 sw s se
 
 to go somewhere type, for example "go sw" or just "sw"
-`
+`,
 }
 
 export default config;

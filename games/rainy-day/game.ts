@@ -7,6 +7,7 @@ const rainyDay = <IGame>{
   scenes:<IScene[]>[
     {
       id: 'living-room',
+      name: 'Living room',
       actions: [
         {
           id: 'mirror-look',
@@ -52,16 +53,16 @@ const rainyDay = <IGame>{
       onEnter: () => {
         setText('hello');
       },
+      soundFile: 'light-rain.wav'
     },
     {
       id: 'kitchen',
+      name: 'Kitchen',
       onEnter: () => {
-        setText(
-          `
-          You're in the kitchen.
+        setText(`You're in the kitchen.
 
-          You see a lantern on the floor.
-          `
+You see a lantern on the floor.
+`
         );
       },
       onLook: () => {

@@ -9,11 +9,11 @@ export interface IConfig {
   theme: 'high-contrast' | 'halloween';
   inputPlaceholder?: string;
   gap?: number // Gap between elements,
-  actionTimeout?: number; // Time between performing an action and seeing text (if present), and showing the after effects
   unknownActionText: string;
   emptyInventoryText?: string;
   loopSceneSoundtrack?: boolean;
   startingSceneId: string;
+  showSceneNameAtTheTop?: boolean;
 }
 
 export interface ITheme {
@@ -40,9 +40,11 @@ export interface IGame {
 
 export interface IScene {
   id: string;
+  name?: string;
   onLook: () => void,
   onEnter: () => void,
-  actions: IAction[]
+  actions: IAction[],
+  soundFile?: string;
 }
 
 export interface IAction {

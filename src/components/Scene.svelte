@@ -4,17 +4,19 @@
 	import { activeSceneText } from '../stores';
 </script>
 
-<pre class="scene">
-  {#if $activeSceneText}
-		{#if config.typewriterEffect}
-			<Typewriter cursor={false} delay={100} interval={config.typewriterSpeed}>
-        <span>{@html $activeSceneText}</span>
-      </Typewriter>
-		{:else}
-			<span>{@html $activeSceneText}</span>
-		{/if}
-	{/if}
+{#if $activeSceneText}
+	{#if config.typewriterEffect}
+		<Typewriter cursor={false} delay={100} interval={config.typewriterSpeed}>
+			<pre class="scene">
+<code>{@html $activeSceneText}</code>
 </pre>
+		</Typewriter>
+	{:else}
+		<pre>
+			<code>{@html $activeSceneText}</code>
+		</pre>
+	{/if}
+{/if}
 
 <style type="text/css">
 	.scene {

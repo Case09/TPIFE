@@ -1,14 +1,19 @@
 <script lang="ts">
+	import { reverse } from 'ramda';
 	import type { IAction } from '../types';
 	import game from '../../disk-drive';
 	import config from '../../disk-drive/config';
 	import { activeScene, activeSceneText, commandHistory } from '../stores';
 	import lexicon from '../../disk-drive/lexicon';
 	import { recordAction, setText, showInventoryText } from '../stores/helpers';
+	import themes from '../themes';
 
 	let inputValue: string;
 
+	$: theme = themes.find((t) => t.name === config.theme) || themes[0];
+
 	function handleKeyDown(e: KeyboardEvent) {
+		if (!inputValue) return;
 		if (e.key === 'Enter') {
 			interpret();
 		}
@@ -134,9 +139,58 @@
 			}
 		}
 	}
+
+	$: inputStyle = [
+		theme.controlsInputBorderColor &&
+			`--controlsInputBorderColor: ${theme.controlsInputBorderColor}`,
+		theme.controlsInputBgColor && `--controlsInputBgColor: ${theme.controlsInputBgColor}`
+	]
+		.filter(Boolean)
+		.join(';');
 </script>
 
-<input type="text" bind:value={inputValue} on:keydown={handleKeyDown} />
+<div class="controls">
+	<input
+		type="text"
+		style={inputStyle}
+		autofocus
+		on:keydown={handleKeyDown}
+		bind:value={inputValue}
+		maxlength="100"
+		placeholder={config.inputPlaceholder}
+	/>
+	<code class="history">
+		{#each reverse($commandHistory) as h}
+			<p>> {@html h}</p>
+		{/each}
+	</code>
+</div>
 
 <style type="text/css">
+	.controls {
+		display: flex;
+		gap: var(--controlsPadding);
+	}
+
+	.controls input {
+		border: var(--borderThickness) solid var(--controlsInputBorderColor);
+		background-color: var(--controlsInputBgColor);
+		color: var(--textColor);
+		padding: 0.5rem;
+		height: 20px;
+		border-radius: 3px;
+		outline: none;
+	}
+
+	.controls .history {
+		flex: 1;
+		border: var(--borderThickness) solid var(--controlsBorderColor);
+		color: var(--textColor);
+		padding: 1rem;
+		height: 60px;
+		line-height: 1.8;
+		overflow-y: auto;
+		overflow-x: hidden;
+		white-space: pre-wrap;
+	}
 </style>
