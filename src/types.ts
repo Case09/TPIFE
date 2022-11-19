@@ -9,7 +9,7 @@ export interface IConfig {
   typewriterEffect?: boolean;
   typewriterSpeed?: number; // ms
   typewriterEasingFn?: EasingFunction;
-  theme: 'high-contrast' | 'halloween' | 'black-and-white';
+  theme: 'high-contrast' | 'halloween' | 'black-and-beige';
   inputPlaceholder?: string;
   gap?: number // Gap between elements,
   unknownActionText: string;

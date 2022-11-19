@@ -80,7 +80,7 @@
 
 	.name-on-top {
 		height: 15px;
-		color: white;
+		color: var(--textColor);
 		font-family: monospace;
 	}
 

@@ -6,6 +6,7 @@ import { underline } from '../../../src/utils';
 export default <IScene>{
   id: 'entrance',
   name: 'In front of the lighthouse',
+  soundFile: 'light-rain.wav',
   onEnter: () => {
     if (alreadyPerformed('entrance-east')) {
       setText(`You return to the front door.`);
