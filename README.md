@@ -130,7 +130,7 @@ From now on, you can write all your game inside `/games/the-story/game.ts`.
 
 <u>Please check `/games/lighthouse/game.ts` for and example called "lighthouse"</u>
 
-## Text parsing<a if="parsing"></a>
+## Text parsing<a id="parsing"></a>
 
 Text parsing in TPIFE works based on a concept of `keys`. Key is a string that is used to connect user entered text with an action. You pass in `keys` as an array in your actions.
 
