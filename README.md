@@ -1,6 +1,6 @@
 ## TPIFE (Text Parser Interactive Fiction "Engine")
 
-![Screenshot](./screenshot.jpg?raw=true)
+![Screenshot](screenshot.jpg 'Screenshot')
 Small (unfinished) demo: https://tpife-hd0ajzm25-case09.vercel.app
 
 ## <u>Disclaimer</u>
