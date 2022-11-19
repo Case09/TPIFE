@@ -24,15 +24,15 @@ const themes = <ITheme[]>[
     "controlsInputBorderColor": "orange"
   },
   {
-    "name": "black-and-white",
+    "name": "black-and-beige",
     "bgColor": "black",
-    "borderColor": "white",
+    "borderColor": "beige",
     "borderThickness": 3,
-    "controlsBorderColor": "white",
-    "sceneBorderColor": "white",
-    "textColor": "white",
+    "controlsBorderColor": "beige",
+    "sceneBorderColor": "beige",
+    "textColor": "beige",
     "controlsInputBgColor": "none",
-    "controlsInputBorderColor": "white"
+    "controlsInputBorderColor": "beige"
   }
 ];
 

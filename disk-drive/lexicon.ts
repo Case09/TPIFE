@@ -10,7 +10,7 @@ const lexicon = {
   southEast: ['south-east', 'se'],
   northEast: ['north-east', 'ne'],
   take: ['pick up', 'take', 'pick'],
-  look: ['look', 'examine', 'l'],
+  look: ['look', 'look around', 'examine', 'l'],
   up: ['upstairs', 'climb up', 'climb upstairs', 'up'],
   down: ['down', 'downstairs', 'climb down', 'climb downstairs'],
   go: ['go', 'walk to', 'move to', 'walk towards', 'move towards', 'walk'],
@@ -26,7 +26,8 @@ const lexicon = {
   inventory: ['open inventory', 'inventory', 'inv', 'i'],
   help: ['help', 'show help', 'open help'],
   saveGame: ['save', 'save game'],
-  loadGame: ['load', 'load game']
+  loadGame: ['load', 'load game'],
+  follow: ['follow']
 };
 
 export default lexicon;

@@ -5,11 +5,13 @@ import type { IAction, IGame, IScene } from '../../src/types';
 import { underline } from '../../src/utils';
 import entrance from './scenes/entrance';
 import behindTheLighthouse from './scenes/behind-the-lighthouse';
+import groundFloor from './scenes/ground-floor';
 
 const lighthouse = <IGame>{
   scenes: <IScene[]>[
     entrance,
-    behindTheLighthouse
+    behindTheLighthouse,
+    groundFloor
   ],
   inventoryActions: [
 

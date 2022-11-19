@@ -4,8 +4,8 @@ const config: IConfig = {
   title: "Lighthouse",
   width: 700,
   height: 500,
-  typewriterSpeed: 2000,
-  theme: 'black-and-white',
+  typewriterSpeed: 1000,
+  theme: 'black-and-beige',
   gap: 12,
   unknownActionText: 'Try something else.',
   helpText: 
