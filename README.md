@@ -1,7 +1,5 @@
 ## TPIFE (Text Parser Interactive Fiction "Engine")
 
----
-
 ```
 ** Disclaimer **
 
@@ -23,8 +21,6 @@ Currently this project is a bit rough around the edges, but i want to add more f
 - [Acknowledgements](#ack)
 - [Changelog](#changelog)
 
----
-
 TPIFE is a framework for writing IF stories in Javascript. It is made with [SvelteKit](https://kit.svelte.dev/).
 
 ### Some features include:
@@ -38,9 +34,7 @@ TPIFE is a framework for writing IF stories in Javascript. It is made with [Svel
 - Ability to customise "typewriter" effect used to print out the text
 - ...More to come!
 
-## Running<a href="#running"></a>
-
----
+## Running<a id="running"></a>
 
 In order to run it locally do the following:
 
@@ -52,8 +46,6 @@ In order to run it locally do the following:
 To make a build version run `npm run build`
 
 ## Setting up a new story<a href="#setup"></a>
-
----
 
 Let's say you want to start writing new IF story called "TheStory" (i know, so original).
 
@@ -139,8 +131,6 @@ From now on, you can write all your game inside `/games/the-story/game.ts`.
 
 ## Configurations<a href="#conf"></a>
 
----
-
 Check out `/src/types.ts` for all types that are used.
 
 Below are the properties you can use in your `/games/mygame/config.ts` file to add new or overwrite the default values.
@@ -164,8 +154,6 @@ Below are the properties you can use in your `/games/mygame/config.ts` file to a
 
 ## Helper functions<a href="#helpers"></a>
 
----
-
 Helper functions help you to easily invoke functions like switching scenes, taking items etc.
 
 You can use them by importing them into your game file from `/src/stores/helpers.ts`
@@ -186,13 +174,9 @@ You can use them by importing them into your game file from `/src/stores/helpers
 
 ## Soundtrack<a href="#soundtrack"></a>
 
----
-
 Place any audio file supported by [audio tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) into `/static/sounds` directory. You can reference the files in this folder inside you scene by passing full file name to `soundFile`, e.g. `soundFile: 'light-rain.wav'`.
 
 ## Themes<a href="#themes"></a>
-
----
 
 Check out `/src/themes.ts` for all themes you can use. To use them, can pass theme `name` to your game config. If you want to make a new one, just copy and paste one of them and change the values.
 
@@ -200,12 +184,8 @@ It was intentionally made so that you cannot change everything, but with clever 
 
 ## Acknowledgements<a href="#ack"></a>
 
----
-
 - Partly inspired by https://github.com/okaybenji/text-engine
 
 ## Changes<a href="#changelog"></a>
-
----
 
 TODO
