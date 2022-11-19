@@ -14,6 +14,7 @@ Currently this project is a bit rough around the edges, but i want to add more f
 
 - [Running](#running)
 - [Setting up a new story](#setup)
+- [Text parsing](#parsing)
 - [Configurations](#conf)
 - [Helper functions](#helpers)
 - [Soundtrack](#soundtrack)
@@ -128,6 +129,35 @@ You can repeat this process for any other games that you have in your `/games` f
 From now on, you can write all your game inside `/games/the-story/game.ts`.
 
 <u>Please check `/games/lighthouse/game.ts` for and example called "lighthouse"</u>
+
+## Text parsing<a if="parsing"></a>
+
+Text parsing in TPIFE works based on a concept of `keys`. Key is a string that is used to connect user entered text with an action. You pass in `keys` as an array in your actions.
+
+Example:
+
+```
+{
+  ...
+  keys: [
+    ['enter', 'room', 'east']
+    [lexicon.east],
+    [lexicon.go, 'east']
+  ],
+  onTrigger: () => {}
+  ...
+}
+```
+
+Above example will recognise the action and run corresponding `onTrigger()` if user enters for example:
+
+```
+go to the east, go east, east, e, enter the room to the east, enter room in the east...
+```
+
+The important part is the order of words, so in order to trigger this action, user must enter "enter" before "room", so "room enter east" will not work.
+
+This system is not very smart or complex but it works pretty well and it recognises more of a "natural" language.
 
 ## Configurations<a id="conf"></a>
 
