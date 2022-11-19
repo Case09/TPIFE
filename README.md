@@ -1,14 +1,14 @@
 ## TPIFE (Text Parser Interactive Fiction "Engine")
 
-```
-** Disclaimer **
+## <u>Disclaimer</u>
 
 I made this project primarily for myself and my IF writing, but i'm sharing it in hope someone else will find it useful as well.
 
 This project is meant for people who want to write interactive fiction stories in javascript. It's not comprehensive as some other IF engines but you can definitely make something with it.
 
 Currently this project is a bit rough around the edges, but i want to add more features to it, so there is still more to come.
-```
+
+---
 
 ## Table of contents
 
