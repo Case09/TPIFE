@@ -21,11 +21,9 @@ export interface IConfig {
 
 export interface ITheme {
   name: string;
-  // Bg colors
   bgColor?: string; // Main page background color
   sceneBgColor?: string; // Scene rectangle background color
   controlsBgColor?: string; // Controls rectangle color
-  // Border colors
   borderColor?: string;
   sceneBorderColor?: string;
   controlsBorderColor?: string;
