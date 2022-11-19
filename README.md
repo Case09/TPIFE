@@ -1,5 +1,7 @@
 ## TPIFE (Text Parser Interactive Fiction "Engine")
 
+![Screenshot](screenshot.png)
+
 ## <u>Disclaimer</u>
 
 I made this project primarily for myself and my IF writing, but i'm sharing it in hope someone else will find it useful as well.
