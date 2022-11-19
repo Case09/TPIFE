@@ -1,6 +1,6 @@
 ## TPIFE (Text Parser Interactive Fiction "Engine")
 
-![Screenshot](./screenshot.png)
+![Screenshot](./screenshot.png?raw=true)
 
 ## <u>Disclaimer</u>
 
