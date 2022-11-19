@@ -22,6 +22,17 @@ const themes = <ITheme[]>[
     "textColor": "white",
     "controlsInputBgColor": "none",
     "controlsInputBorderColor": "orange"
+  },
+  {
+    "name": "black-and-white",
+    "bgColor": "black",
+    "borderColor": "white",
+    "borderThickness": 3,
+    "controlsBorderColor": "white",
+    "sceneBorderColor": "white",
+    "textColor": "white",
+    "controlsInputBgColor": "none",
+    "controlsInputBorderColor": "white"
   }
 ];
 

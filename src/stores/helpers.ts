@@ -39,6 +39,10 @@ export function takeItem(item: IItem) {
   inventory.update(i => [...i, item]);
 }
 
+export function exhaustItem(itemId: string) {
+  inventory.update(i => [...i.filter(item => item.id !== itemId)]);
+}
+
 export function hasItem(itemId: string): boolean {
   let hasIt = false;
   inventory.subscribe(i => {

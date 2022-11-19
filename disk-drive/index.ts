@@ -10,6 +10,6 @@
  * You can have multple games in your games folder, but here you can specify which game you want to 'activate'
  */
 
-import RainyDay from '../games/rainy-day/game';
+import Lighthouse from '../games/lighthouse/game';
 
-export default RainyDay;
+export default Lighthouse;

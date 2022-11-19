@@ -1,3 +1,5 @@
+import type { EasingFunction } from 'svelte/types/runtime/transition';
+
 // Config to for setting up basic game look
 export interface IConfig {
   title: string;
@@ -5,14 +7,15 @@ export interface IConfig {
   height: number;
   helpText: string;
   typewriterEffect?: boolean;
-  typewriterSpeed?: number;
-  theme: 'high-contrast' | 'halloween';
+  typewriterSpeed?: number; // ms
+  typewriterEasingFn?: EasingFunction;
+  theme: 'high-contrast' | 'halloween' | 'black-and-white';
   inputPlaceholder?: string;
   gap?: number // Gap between elements,
   unknownActionText: string;
   emptyInventoryText?: string;
   loopSceneSoundtrack?: boolean;
-  startingSceneId: string;
+  startingSceneId?: string;
   showSceneNameAtTheTop?: boolean;
 }
 

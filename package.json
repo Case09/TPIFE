@@ -30,7 +30,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"ramda": "^0.28.0",
-		"svelte-typewriter": "^3.0.4"
+		"ramda": "^0.28.0"
 	}
 }
