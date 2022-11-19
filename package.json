@@ -1,8 +1,20 @@
 {
 	"name": "TPIFE",
+	"description": "Text Parser Interactive Fiction Engine",
 	"version": "1.0.0",
-	"private": true,
-	"author": "Case09",
+	"author": "Filip Uzunovic",
+	"keywords": [
+		"interactive-fiction",
+		"javascript",
+		"svelte",
+		"text-adventure",
+		"text-parser"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Case09/TPIFE"
+	},
+	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
