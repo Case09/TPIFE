@@ -45,7 +45,7 @@ In order to run it locally do the following:
 
 To make a build version run `npm run build`
 
-## Setting up a new story<a href="#setup"></a>
+## Setting up a new story<a id="#setup"></a>
 
 Let's say you want to start writing new IF story called "TheStory" (i know, so original).
 
@@ -129,7 +129,7 @@ From now on, you can write all your game inside `/games/the-story/game.ts`.
 
 <u>Please check `/games/lighthouse/game.ts` for and example called "lighthouse"</u>
 
-## Configurations<a href="#conf"></a>
+## Configurations<a id="#conf"></a>
 
 Check out `/src/types.ts` for all types that are used.
 
@@ -152,7 +152,7 @@ Below are the properties you can use in your `/games/mygame/config.ts` file to a
 | `showSceneNameAtTheTop` | true                                             | If you provide a `name` to your scene, it will be shown at the top of the game window, as long as that scene is active                                                                                          |
 | `startingSceneId`       | -                                                | Pass a string and the game will run with that specific scene, otherwise first scene in `scenes[]` will be taken.                                                                                                |
 
-## Helper functions<a href="#helpers"></a>
+## Helper functions<a id="#helpers"></a>
 
 Helper functions help you to easily invoke functions like switching scenes, taking items etc.
 
@@ -172,20 +172,20 @@ You can use them by importing them into your game file from `/src/stores/helpers
 | `alreadyPerformed()`  | actionId: string                                   | boolean      | Returns boolean about whether action is already performed                                                                             |
 | `recordAction()`      | actionId: string                                   | -            | Records action for future reference                                                                                                   |
 
-## Soundtrack<a href="#soundtrack"></a>
+## Soundtrack<a id="#soundtrack"></a>
 
 Place any audio file supported by [audio tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) into `/static/sounds` directory. You can reference the files in this folder inside you scene by passing full file name to `soundFile`, e.g. `soundFile: 'light-rain.wav'`.
 
-## Themes<a href="#themes"></a>
+## Themes<a id="#themes"></a>
 
 Check out `/src/themes.ts` for all themes you can use. To use them, can pass theme `name` to your game config. If you want to make a new one, just copy and paste one of them and change the values.
 
 It was intentionally made so that you cannot change everything, but with clever use of colors, you can push a certain "aesthetic".
 
-## Acknowledgements<a href="#ack"></a>
+## Acknowledgements<a id="#ack"></a>
 
 - Partly inspired by https://github.com/okaybenji/text-engine
 
-## Changes<a href="#changelog"></a>
+## Changes<a id="#changelog"></a>
 
 TODO
