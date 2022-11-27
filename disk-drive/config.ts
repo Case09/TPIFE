@@ -1,6 +1,5 @@
 import {mergeDeepRight} from 'ramda';
 import type { IConfig } from '../src/types';
-import {linear, quintInOut} from 'svelte/easing';
 
 /**
  * This file merges default config with game specific config and exports it as one for game engine to consume
@@ -20,8 +19,7 @@ const defaultConfig: IConfig = {
   width: 700,
   height: 500,
   typewriterEffect: true,
-  typewriterSpeed: 500,
-  typewriterEasingFn: quintInOut,
+  typewriterSpeed: 30,
   theme: 'high-contrast',
   inputPlaceholder: 'What do you do?',
   gap: 16,

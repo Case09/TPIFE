@@ -1,29 +1,39 @@
 <script lang="ts">
 	import config from '../../disk-drive/config';
 	import { activeSceneText } from '../stores';
-	import { tweened } from 'svelte/motion';
+	import { tick } from 'svelte';
 
 	//NOTE: Don't change indentations of <pre> tags or can mess up the scene text
 
-	let typewriterStore = initStore();
+	let visible = false;
 
-	function initStore() {
-		return tweened(0, {
-			duration: config.typewriterSpeed,
-			easing: config.typewriterEasingFn
-		});
+	function typewriter(node, { speed = config.typewriterSpeed }) {
+		const text = node.innerHTML;
+		const duration = text.length / (speed * 0.01);
+
+		return {
+			duration,
+			tick: (t) => {
+				const i = ~~(text.length * t);
+				node.innerHTML = text.slice(0, i);
+			}
+		};
 	}
 
-	$: {
-		typewriterStore = initStore();
-		typewriterStore.set($activeSceneText.length);
+	$: if ($activeSceneText) {
+		visible = false;
+		tick().then(() => {
+			visible = true;
+		});
 	}
 </script>
 
 {#if $activeSceneText}
 	{#if config.typewriterEffect}
 		<pre class="scene">
-<code>{@html $activeSceneText.substring(0, $typewriterStore)}</code>
+{#if visible}
+				<code in:typewriter>{@html $activeSceneText}</code>
+			{/if}
 </pre>
 	{:else}
 		<pre class="scene">

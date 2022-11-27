@@ -1,4 +1,3 @@
-import type { EasingFunction } from 'svelte/types/runtime/transition';
 
 // Config to for setting up basic game look
 export interface IConfig {
@@ -8,7 +7,6 @@ export interface IConfig {
   helpText: string;
   typewriterEffect?: boolean;
   typewriterSpeed?: number; // ms
-  typewriterEasingFn?: EasingFunction;
   theme: 'high-contrast' | 'halloween' | 'black-and-beige';
   inputPlaceholder?: string;
   gap?: number // Gap between elements,

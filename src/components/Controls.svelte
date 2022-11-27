@@ -40,6 +40,7 @@
 				throw new Error('You must provide onLook function to every scene.');
 			}
 			$activeScene.onLook();
+			recordAction(`${$activeScene.id}-look`);
 			inputValue = '';
 			return;
 		}
