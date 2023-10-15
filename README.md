@@ -1,7 +1,7 @@
 ## TPIFE (Text Parser Interactive Fiction "Engine")
 
 [![screenshot.jpg](https://i.postimg.cc/yYDS97KR/screenshot.jpg)](https://postimg.cc/crNHGyr1)
-Small (unfinished) demo: https://tpife-hd0ajzm25-case09.vercel.app
+Small (unfinished) demo: https://tpife.vercel.app
 
 ## <u>Disclaimer</u>
 
